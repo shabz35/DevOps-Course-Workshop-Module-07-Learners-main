@@ -14,13 +14,10 @@ jobs:
       with:                                            # This section is needed if you need to pass arguments to the action
         who-to-greet: 'Mona the Octocat'
 
-        name: dotnet package
-        dotnet-version: [ '3.1.x', '6.0.x' ]
-
-      - name: Setup dotnet ${{ matrix.dotnet-version }}
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+          dotnet-version: "8.0.x"
       # You can test your matrix by printing the current dotnet version
-      - name: Display dotnet version
-        run: dotnet --version
+    - name: Display dotnet version
+      run: dotnet --version
