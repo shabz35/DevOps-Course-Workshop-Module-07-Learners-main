@@ -8,18 +8,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4 # Adds a step to checkout the repository code
 
-
-  name: Continuous Integration
-on: [push]
-
-jobs:
-  build:
-    name: Build and test
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-
-
     - name: Hello world       # Name of step
       run: echo 'Hello world' # Command to run
-      
